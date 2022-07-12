@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "phone": "1-770-736-8031 x56442",
+      "address": "Apt. 556, Kulas Light, Gwenborough, 92998-3874",
+      "company": "Romaguera-Crona"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "phone": "010-692-6593 x09125",
+      "address": "Suite 879, Victor Plains, Wisokyburgh, 90566-7771",
+      "company": "Deckow-Crist"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "phone": "1-463-123-4447",
+      "address": "Suite 847, Douglas Extension, McKenziehaven, 59590-4157",
+      "company": "Romaguera-Jacobson"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne.89",
+      "email": "Julianne.OConner@kory.org",
+      "phone": "493-170-9623 x156",
+      "address": "Apt. 692, Hoeger Mall, South Elvis, 53919-4257",
+      "company": "Robel-Corkery"
+    },
+    {
+      "id": 5,
+      "name": "Chelsey Dietrich",
+      "username": "Kamren",
+      "email": "Lucio_Hettinger@annie.ca",
+      "phone": "(254)954-1289",
+      "address": "Suite 351, Skiles Walks, Roscoeview, 33263",
+      "company": "Keebler LLE"
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "phone": "1-477-935-8478 x6430",
+      "address": "Apt. 950, Norberto Crossing, South Christy, 23505-1337",
+      "company": "Considine-Lockman"
+    },
+    {
+      "id": 7,
+      "name": "Kurtis Weissnat",
+      "username": "Elwyn.Skiles",
+      "email": "Telly.Hoeger@billy.biz",
+      "phone": "210.067.6132",
+      "address": "Suite 280, Rex Trail, Howemouth, 58804-1099",
+      "company": "Johns Group"
+    },
+    {
+      "id": 8,
+      "name": "Nicholas Runolfsdottir V",
+      "username": "Maxime_Nienow",
+      "email": "Sherwood@rosamond.me",
+      "phone": "586.493.6943 x140",
+      "address": "Suite 729, Ellsworth Summit, Aliyaview, 45169",
+      "company": "Abernathy Group"
+    },
+    {
+      "id": 9,
+      "name": "Glenna Reichert",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "phone": "(775)976-6794 x41206",
+      "address": "Suite 449, Dayna Park, Bartholomebury, 76495-3109",
+      "company": "Yost and Sons"
+    },
+    {
+      "id": 10,
+      "name": "Clementina qqqq",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "phone": "024-648-3804",
+      "address": "Suite 198, Kattie Turnpike, Lebsackbury, 31428-2261",
+      "company": "Hoeger LLT"
+    },
+    {
+      "id": 52,
+      "name": "demo",
+      "username": "nbm",
+      "email": "demo@gmail.com",
+      "phone": "567 6657",
+      "address": "fg7689",
+      "company": "ssd23"
+    },
+    {
+      "id": 96,
+      "name": "krishna",
+      "username": "krishna_0",
+      "email": "krishna@gmail.com",
+      "phone": "234-768-3244",
+      "address": "23, sdfdff,dsfdg",
+      "company": "swdsd"
+    }
+  ]
+}

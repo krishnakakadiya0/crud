@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 25px 20px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: 0;
+    background-color: #4285F4;
+    color: #fff;
+    border-radius: 8px;
+}
+.icon{
+    background-color: transparent;
+    border: 0;
+    padding: 8px;
+    color: rgb(118, 118, 118);
+}
+.ag-ltr .ag-cell-focus:not(.ag-cell-range-selected):focus-within{
+    border: 0 !important;
+}
