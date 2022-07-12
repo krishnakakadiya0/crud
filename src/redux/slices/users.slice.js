@@ -19,11 +19,11 @@ export const getUserApi = createAsyncThunk(
 
 export const setUserApi = createAsyncThunk(
   "users/setUser",
-  (arg, { dispatch }) => {
+  (arg) => {
     try {
       axios
         .post("http://localhost:3002/users", arg)
-        .then((response) => {})
+        .then(() => {})
         .catch((error) => console.log(error.message));
     } catch (error) {
       console.log(error.message);
@@ -33,11 +33,11 @@ export const setUserApi = createAsyncThunk(
 
 export const editUser = createAsyncThunk(
   "users/editUser",
-  (arg, { dispatch }) => {
+  (arg) => {
     try {
       axios
         .put(`http://localhost:3002/users/${arg.id}`, arg)
-        .then((response) => {})
+        .then(() => {})
         .catch((error) => console.log(error.message));
     } catch (error) {
       console.log(error.message);
@@ -47,11 +47,11 @@ export const editUser = createAsyncThunk(
 
 export const deleteUser = createAsyncThunk(
   "users/deleteUser",
-  (arg, { dispatch }) => {
+  (arg) => {
     try {
       axios
         .delete(`http://localhost:3002/users/${arg.id}`)
-        .then((response) => {})
+        .then(() => {})
         .catch((error) => console.log(error.message));
     } catch (error) {
       console.log(error.message);
@@ -66,7 +66,7 @@ export const userApi = createSlice({
   },
   reducers: {},
   extraReducers: {
-    [getUserApi.pending]: (state, action) => {
+    [getUserApi.pending]: () => {
       console.log("pending");
     },
     [getUserApi.fulfilled]: (state, action) => {

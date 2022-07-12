@@ -5,7 +5,7 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 import { editUser, getUserApi, setUserApi } from "../redux/slices/users.slice";
 import { DeleteUser } from "./DeleteUser";
-import {EditUserData} from './EditUserData';
+import {EditUserData} from "./EditUserData";
 import { DialogForm } from "./DialogForm";
 
 export const AddUser = () => {
@@ -49,7 +49,7 @@ export const AddUser = () => {
       formik.resetForm();
     },
   });
-  const [columnDefs, setColumnDefs] = useState([
+  const [columnDefs] = useState([
     { field: "id", width: 70 },
     { field: "name", width: 250 },
     { field: "username", width: 200 },
