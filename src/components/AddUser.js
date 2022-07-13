@@ -60,14 +60,14 @@ export const AddUser = () => {
     },
   });
   const [columnDefs] = useState([
-    { field: "id", width: 70 },
-    { field: "name", width: 250 },
+    { field: "id", width: 80 },
+    { field: "name", width: 240 },
     { field: "username", width: 200 },
     { field: "email", width: 280 },
     { field: "phone", width: 200 },
     { field: "address", width: 460 },
     { field: "company", width: 200 },
-    { field: "Delete", width: 80, cellRenderer: DeleteUser },
+    { field: "Delete", width: 90, cellRenderer: DeleteUser },
     {
       field: "Edit",
       width: 80,

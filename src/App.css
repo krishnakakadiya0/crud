@@ -44,6 +44,20 @@
   padding: 8px;
   color: rgb(118, 118, 118);
 }
+.ag-theme-alpine {
+  --ag-foreground-color: #222 !important;
+  --ag-background-color: #fff !important;
+  --ag-header-foreground-color: aliceblue !important;
+  --ag-header-background-color: #4285F4 !important;
+  --ag-odd-row-background-color: rgb(234, 234, 234) !important;
+  --ag-header-column-resize-handle-color: rgb(126, 46, 132) !important;
+}
+.ag-header-cell{
+  font-size: 16px;
+}
+.ag-header-cell-resize::after{
+  background-color: aliceblue !important;
+}
 .ag-ltr .ag-cell-focus:not(.ag-cell-range-selected):focus-within{
   border: 0 !important;
 }
