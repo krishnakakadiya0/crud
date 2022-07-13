@@ -5,7 +5,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 
-export const DataGrid = ({rowData, columnDefs}) => {
+export const DataGrid = ({ rowData, columnDefs }) => {
   const defaultColDef = useMemo(() => ({
     sortable: true,
     resizable: true,

@@ -8,9 +8,29 @@
   padding: 25px 20px;
   background-color: aliceblue;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
-
+.search-icon{
+  position: absolute;
+  margin: 6px 0 0 8px;
+  font-size: 20px !important;
+  color: rgb(132, 132, 132);
+}
+.input-box{
+  padding:6px 32px;
+  border: 2px solid #4285F4;
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.input-box:focus{
+  outline: 0;
+  border-color: #005cf1;
+}
+.no-result{
+  text-align: center;
+  margin-top: 50px;
+}
 .btn{
   padding: 10px 20px;
   border: 0;

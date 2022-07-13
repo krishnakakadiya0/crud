@@ -3,17 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { DataGrid } from "./DataGrid";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { editUser, getUserApi, setUserApi } from "../redux/slices/users.slice";
+import {
+  editUser,
+  getUserApi,
+  searchUser,
+  setUserApi,
+} from "../redux/slices/users.slice";
 import { DeleteUser } from "./DeleteUser";
-import {EditUserData} from "./EditUserData";
+import { EditUserData } from "./EditUserData";
 import { DialogForm } from "./DialogForm";
+import SearchIcon from "@mui/icons-material/Search";
 
 export const AddUser = () => {
   const usersData = useSelector((state) => state.users.users);
+  const searchData = useSelector((state) => state.users.search);
   const dispatch = useDispatch();
 
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState(false);
+  const [isSearch, setIsSearch] = useState(false);
 
   let schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -41,7 +49,9 @@ export const AddUser = () => {
       if (edit) {
         dispatch(editUser(values));
       } else {
-        dispatch(setUserApi({ id: Math.round(Math.random() * 100), ...values }));
+        dispatch(
+          setUserApi({ id: Math.round(Math.random() * 100), ...values })
+        );
       }
       dispatch(getUserApi());
       setEdit(false);
@@ -85,9 +95,22 @@ export const AddUser = () => {
     setEdit(false);
   };
 
+  const handleChange = (event) => {
+    event.target.value ? setIsSearch(true) : setIsSearch(false);
+    dispatch(searchUser(event.target.value));
+  };
+
   return (
     <div>
       <div className="header">
+        <div>
+          <SearchIcon className="search-icon"/>
+          <input
+            placeholder="Search..."
+            className="input-box"
+            onChange={handleChange}
+          />
+        </div>
         <button
           onClick={handleClickOpen}
           className="btn"
@@ -96,8 +119,19 @@ export const AddUser = () => {
           Add User
         </button>
       </div>
-      <DataGrid rowData={usersData} columnDefs={columnDefs} />
-      <DialogForm open={open} handleClose={handleClose} formik={formik} edit={edit}/>
+      {searchData.length ? (
+        <DataGrid rowData={searchData} columnDefs={columnDefs} />
+      ) : isSearch ? (
+        <p className="no-result">No results found!</p>
+      ) : (
+        <DataGrid rowData={usersData} columnDefs={columnDefs} />
+      )}
+      <DialogForm
+        open={open}
+        handleClose={handleClose}
+        formik={formik}
+        edit={edit}
+      />
     </div>
   );
 };
