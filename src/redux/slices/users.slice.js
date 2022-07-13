@@ -68,7 +68,7 @@ export const userApi = createSlice({
             d.phone.includes(action.payload) ||
             d.address.toLowerCase().includes(action.payload.toLowerCase()) ||
             d.company.toLowerCase().includes(action.payload.toLowerCase())
-        )
+        );
       state.search = filteredData;
     },
   },
@@ -86,14 +86,3 @@ export const userApi = createSlice({
 
 export const { searchUser } = userApi.actions;
 export default userApi.reducer;
-
-// const filteredData = users.users.filter(
-//   (d) =>
-//     d.id.toString().includes(arg) ||
-//     d.name.toLowerCase().includes(arg.toLowerCase()) ||
-//     d.username.toLowerCase().includes(arg.toLowerCase()) ||
-//     d.email.toLowerCase().includes(arg.toLowerCase()) ||
-//     d.phone.includes(arg) ||
-//     d.address.toLowerCase().includes(arg.toLowerCase()) ||
-//     d.company.toLowerCase().includes(arg.toLowerCase())
-// );
