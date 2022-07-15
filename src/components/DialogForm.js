@@ -27,7 +27,6 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               onChange={formik.handleChange}
               value={formik.values.name}
             />
-            {formik.errors.name ? <p>{formik.errors.name}</p> : null}
             <TextField
               autoFocus
               margin="dense"
@@ -40,7 +39,6 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               onChange={formik.handleChange}
               value={formik.values.username}
             />
-            {formik.errors.username ? <p>{formik.errors.username}</p> : null}
             <TextField
               autoFocus
               margin="dense"
@@ -53,7 +51,6 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               onChange={formik.handleChange}
               value={formik.values.email}
             />
-            {formik.errors.email ? <p>{formik.errors.email}</p> : null}
             <TextField
               autoFocus
               margin="dense"
@@ -66,7 +63,6 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               onChange={formik.handleChange}
               value={formik.values.phone}
             />
-            {formik.errors.phone ? <p>{formik.errors.phone}</p> : null}
             <TextField
               autoFocus
               margin="dense"
@@ -79,7 +75,6 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               onChange={formik.handleChange}
               value={formik.values.address}
             />
-            {formik.errors.address ? <p>{formik.errors.address}</p> : null}
             <TextField
               autoFocus
               margin="dense"
@@ -92,13 +87,12 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               onChange={formik.handleChange}
               value={formik.values.company}
             />
-            {formik.errors.company ? <p>{formik.errors.company}</p> : null}
           </DialogContent>
           <DialogActions>
             <button onClick={handleClose} className="btn">
               Cancel
             </button>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn" data-testid="isEdit"> 
               {edit ? "Edit" : "Add"}
             </button>
           </DialogActions>

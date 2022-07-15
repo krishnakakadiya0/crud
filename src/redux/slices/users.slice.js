@@ -58,17 +58,16 @@ export const userApi = createSlice({
   },
   reducers: {
     searchUser: (state, action) => {
-      const filteredData = state.users
-        .filter(
-          (d) =>
-            d.id.toString().includes(action.payload) ||
-            d.name.toLowerCase().includes(action.payload.toLowerCase()) ||
-            d.username.toLowerCase().includes(action.payload.toLowerCase()) ||
-            d.email.toLowerCase().includes(action.payload.toLowerCase()) ||
-            d.phone.includes(action.payload) ||
-            d.address.toLowerCase().includes(action.payload.toLowerCase()) ||
-            d.company.toLowerCase().includes(action.payload.toLowerCase())
-        );
+      const filteredData = state.users.filter(
+        (d) =>
+          d.id.toString().includes(action.payload) ||
+          d.name.toLowerCase().includes(action.payload.toLowerCase()) ||
+          d.username.toLowerCase().includes(action.payload.toLowerCase()) ||
+          d.email.toLowerCase().includes(action.payload.toLowerCase()) ||
+          d.phone.includes(action.payload) ||
+          d.address.toLowerCase().includes(action.payload.toLowerCase()) ||
+          d.company.toLowerCase().includes(action.payload.toLowerCase())
+      );
       state.search = filteredData;
     },
   },
@@ -77,9 +76,7 @@ export const userApi = createSlice({
       console.log("pending");
     },
     [getUserApi.fulfilled]: (state, action) => {
-      action.payload === undefined
-        ? console.log("undefined")
-        : (state.users = action.payload);
+      action.payload && (state.users = action.payload);
     },
   },
 });

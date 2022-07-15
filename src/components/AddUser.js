@@ -9,19 +9,20 @@ import {
   searchUser,
   setUserApi,
 } from "../redux/slices/users.slice";
-import { DeleteUser } from "./DeleteUser";
+import DeleteUser from "./DeleteUser";
 import { EditUserData } from "./EditUserData";
 import { DialogForm } from "./DialogForm";
 import SearchIcon from "@mui/icons-material/Search";
 
-export const AddUser = () => {
+const AddUser = () => {
+  const [open, setOpen] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [isSearch, setIsSearch] = useState(false);
+
   const usersData = useSelector((state) => state.users.users);
   const searchData = useSelector((state) => state.users.search);
   const dispatch = useDispatch();
 
-  const [open, setOpen] = useState(false);
-  const [edit, setEdit] = useState(false);
-  const [isSearch, setIsSearch] = useState(false);
 
   let schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -46,7 +47,7 @@ export const AddUser = () => {
     },
     validationSchema: schema,
     onSubmit: (values) => {
-      if (edit) {
+      if(edit) {
         dispatch(editUser(values));
       } else {
         dispatch(
@@ -54,8 +55,8 @@ export const AddUser = () => {
         );
       }
       dispatch(getUserApi());
-      setEdit(false);
       handleClose();
+      setEdit(false);
       formik.resetForm();
     },
   });
@@ -73,7 +74,7 @@ export const AddUser = () => {
       width: 80,
       cellRenderer: EditUserData,
       cellRendererParams: {
-        clicked: function (data) {
+        clicked: (data) => {
           setOpen(true);
           setEdit(true);
           formik.setValues(data);
@@ -96,7 +97,7 @@ export const AddUser = () => {
   };
 
   const handleChange = (event) => {
-    event.target.value ? setIsSearch(true) : setIsSearch(false);
+    event.target.value && setIsSearch(true);
     dispatch(searchUser(event.target.value));
   };
 
@@ -104,7 +105,7 @@ export const AddUser = () => {
     <div>
       <div className="header">
         <div>
-          <SearchIcon className="search-icon"/>
+          <SearchIcon className="search-icon" />
           <input
             placeholder="Search..."
             className="input-box"
@@ -135,3 +136,5 @@ export const AddUser = () => {
     </div>
   );
 };
+
+export default AddUser;

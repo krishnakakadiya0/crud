@@ -12,7 +12,6 @@ export const DataGrid = ({ rowData, columnDefs }) => {
   }));
 
   return (
-    <>
       <div
         className="ag-theme-alpine"
         style={{ width: "100%", height: "471px" }}
@@ -25,6 +24,5 @@ export const DataGrid = ({ rowData, columnDefs }) => {
           rowSelection="multiple"
         />
       </div>
-    </>
   );
 };

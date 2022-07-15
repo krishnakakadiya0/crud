@@ -46,15 +46,6 @@
       "company": "Keebler LLE"
     },
     {
-      "id": 6,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
-      "phone": "1-477-935-8478 x6430",
-      "address": "Apt. 950, Norberto Crossing, South Christy, 23505-1337",
-      "company": "Considine-Lockman"
-    },
-    {
       "id": 7,
       "name": "Kurtis Weissnat",
       "username": "Elwyn.Skiles",
@@ -64,48 +55,21 @@
       "company": "Johns Group"
     },
     {
-      "id": 8,
-      "name": "Nicholas Runolfsdottir V",
-      "username": "Maxime_Nienow",
-      "email": "Sherwood@rosamond.me",
-      "phone": "586.493.6943 x140",
-      "address": "Suite 729, Ellsworth Summit, Aliyaview, 45169",
-      "company": "Abernathy Group"
-    },
-    {
-      "id": 9,
-      "name": "Glenna Reichert",
-      "username": "Delphine",
-      "email": "Chaim_McDermott@dana.io",
-      "phone": "(775)976-6794 x41206",
-      "address": "Suite 449, Dayna Park, Bartholomebury, 76495-3109",
-      "company": "Yost and Sons"
-    },
-    {
-      "id": 10,
-      "name": "Clementina qqqq",
-      "username": "Moriah.Stanton",
-      "email": "Rey.Padberg@karina.biz",
-      "phone": "024-648-3804",
-      "address": "Suite 198, Kattie Turnpike, Lebsackbury, 31428-2261",
-      "company": "Hoeger LLT"
-    },
-    {
-      "id": 96,
-      "name": "krishna",
-      "username": "krishna_0",
-      "email": "krishna@gmail.com",
-      "phone": "234-768-3244",
-      "address": "23",
-      "company": "swdsd"
-    },
-    {
-      "id": 11,
-      "name": "demo",
+      "id": 13,
+      "name": "sdfdsf",
       "username": "harshita_dhanak",
       "email": "harshita11@gmail.com",
       "phone": "1-123-456-7890",
-      "address": "SRGF6756",
+      "address": "fg",
+      "company": "fdgfdh"
+    },
+    {
+      "id": 97,
+      "name": "dfsf",
+      "username": "harshita_dhanak",
+      "email": "harshita11@gmail.com",
+      "phone": "54456745",
+      "address": "SRGF",
       "company": "fdgfdh"
     }
   ]
