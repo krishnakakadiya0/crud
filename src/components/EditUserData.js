@@ -2,5 +2,9 @@
 
 import React from "react";
 import EditIcon from "@mui/icons-material/Edit";
- 
- export const EditUserData = ({clicked, data}) => <EditIcon className="icon" onClick={() => clicked(data)} />
+
+const EditUserData = ({ clicked, data }) => (
+  <EditIcon className="icon" onClick={() => clicked(data)} data-testid="editUser" />
+);
+
+export default EditUserData;

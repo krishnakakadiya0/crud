@@ -10,7 +10,7 @@ import {
   setUserApi,
 } from "../redux/slices/users.slice";
 import DeleteUser from "./DeleteUser";
-import { EditUserData } from "./EditUserData";
+import EditUserData from "./EditUserData";
 import { DialogForm } from "./DialogForm";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -22,7 +22,6 @@ const AddUser = () => {
   const usersData = useSelector((state) => state.users.users);
   const searchData = useSelector((state) => state.users.search);
   const dispatch = useDispatch();
-
 
   let schema = yup.object().shape({
     name: yup.string().required("Name is required"),
@@ -47,7 +46,7 @@ const AddUser = () => {
     },
     validationSchema: schema,
     onSubmit: (values) => {
-      if(edit) {
+      if (edit) {
         dispatch(editUser(values));
       } else {
         dispatch(
@@ -110,12 +109,14 @@ const AddUser = () => {
             placeholder="Search..."
             className="input-box"
             onChange={handleChange}
+            aria-label="searchInput"
           />
         </div>
         <button
           onClick={handleClickOpen}
           className="btn"
           style={{ marginRight: "20px" }}
+          data-testid="addUser"
         >
           Add User
         </button>

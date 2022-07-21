@@ -21,7 +21,7 @@ export const DataGrid = ({ rowData, columnDefs }) => {
           columnDefs={columnDefs}
           defaultColDef={defaultColDef}
           animateRows={true}
-          rowSelection="multiple"
+          rowSelection="multiple" 
         />
       </div>
   );

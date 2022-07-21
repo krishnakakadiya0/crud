@@ -8,7 +8,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { Form, Formik } from "formik";
 
-export const DialogForm = ({open, handleClose, formik, edit}) => {
+export const DialogForm = ({ open, handleClose, formik, edit }) => {
   return (
     <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth={true}>
       <DialogTitle>Add User Detail</DialogTitle>
@@ -26,6 +26,7 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               variant="standard"
               onChange={formik.handleChange}
               value={formik.values.name}
+              aria-label="name"
             />
             <TextField
               autoFocus
@@ -38,6 +39,7 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               variant="standard"
               onChange={formik.handleChange}
               value={formik.values.username}
+              aria-label="userName"
             />
             <TextField
               autoFocus
@@ -50,6 +52,7 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               variant="standard"
               onChange={formik.handleChange}
               value={formik.values.email}
+              aria-label="email"
             />
             <TextField
               autoFocus
@@ -62,6 +65,7 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               variant="standard"
               onChange={formik.handleChange}
               value={formik.values.phone}
+              aria-label="phone"
             />
             <TextField
               autoFocus
@@ -74,6 +78,7 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               variant="standard"
               onChange={formik.handleChange}
               value={formik.values.address}
+              aria-label="address"
             />
             <TextField
               autoFocus
@@ -86,13 +91,14 @@ export const DialogForm = ({open, handleClose, formik, edit}) => {
               variant="standard"
               onChange={formik.handleChange}
               value={formik.values.company}
+              aria-label="company"
             />
           </DialogContent>
           <DialogActions>
             <button onClick={handleClose} className="btn">
               Cancel
             </button>
-            <button type="submit" className="btn" data-testid="isEdit"> 
+            <button type="submit" className="btn" data-testid="isEdit">
               {edit ? "Edit" : "Add"}
             </button>
           </DialogActions>
